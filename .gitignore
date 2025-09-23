@@ -5,3 +5,4 @@ inputf.in
 outputf.out
 
 *.class
+**/*.class
