@@ -10,9 +10,8 @@ public class Main {
 			for (int i = 0; i < arr.length; i++) {
 				arr[i] = sc.nextInt();
 			}
-			int k = sc.nextInt();
 			
-			Array.SubArray.printAllSubArraySum(arr, k);
+			Array.Consecutive.longestConsecutiveSubArray(arr);
 		}
 	}
 }
