@@ -11,7 +11,7 @@ public class Main {
 				arr[i] = sc.nextInt();
 			}
 			
-			Array.Consecutive.longestConsecutiveSubArray(arr);
+			Array.Consecutive.sortedLongestConsecutiveSubArray(arr);
 		}
 	}
 }
