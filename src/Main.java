@@ -10,8 +10,7 @@ public class Main {
 			for (int i = 0; i < arr.length; i++) {
 				arr[i] = sc.nextInt();
 			}
-			
-			Array.Consecutive.sortedLongestConsecutiveSubArray(arr);
+			System.out.println(Array.traverseThree.findMissingElement(arr));
 		}
 	}
 }
