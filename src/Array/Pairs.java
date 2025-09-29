@@ -19,4 +19,20 @@ public class Pairs {
 		}
 	}
 
+	public static void minPairSum(int[] arr) {
+		int min = Integer.MAX_VALUE;
+		int n = 0, m = 0;
+		for (int i = 0; i < arr.length - 1; i++) {
+			for (int j = i + 1; j < arr.length; j++) {
+				int sum = arr[i] + arr[j];
+				if (sum < min) {
+					min = sum;
+					n = arr[i];
+					m = arr[j];
+				}
+			}
+		}
+		System.out.println(n + " " + m);
+	}
+
 }
