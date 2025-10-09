@@ -1,5 +1,5 @@
 // 2 September
-// 3
+// 4
 // 5
 
 package Array;
@@ -136,7 +136,7 @@ public class Sort {
 	    }
 	}
 
-	// variation: first array assending and second one descending
+	// variation: first array ascending and second one descending
 	public static void printRepeatElementInTwoArray2(int[] arr1, int[] arr2) {
 		int i = 0;
 		int j = arr2.length - 1;
@@ -153,7 +153,7 @@ public class Sort {
 		}
 	}
 
-	// variation: first array descending and second one assending
+	// variation: first array descending and second one ascending
 	public static void printRepeatElementInTwoArray3(int[] arr1, int[] arr2) {
 		int i = arr1.length - 1;
 		int j = 0;
