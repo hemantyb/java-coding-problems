@@ -14,7 +14,15 @@ public class Main {
 			for (int i = 0; i < arr2.length; i++) {
 				arr2[i] = sc.nextInt();
 			}
-			Array.Sort.printRepeatElementInTwoArrayOdd(arr1, arr2);
+			int c = sc.nextInt();
+			int[] arr3 = new int[c];
+			for (int i = 0; i < arr3.length; i++) {
+				arr3[i] = sc.nextInt();
+			}
+			int[] res = Array.Merge.mergeThreeArray(arr1, arr2, arr3);
+			for (int i = 0; i < res.length; i++) {
+				System.out.print(res[i] + " ");
+			}
 		}
 	}
 }
