@@ -42,7 +42,7 @@ public class Traverse {
 				count++;
 			}
 		}
-		return count+1;
+		return s.charAt(0) == ' ' ? count : count+1;
 	}
 	
 	public static int countWords2(String s) {
