@@ -21,7 +21,6 @@ public class Traverse {
 				return "Not Palindrome";
 			}
 		}
-
 		return "Palindrome";
 	}
 
@@ -52,5 +51,62 @@ public class Traverse {
 			count++;
 		}
 		return count;
+	}
+
+	public static int countVowels(String s) {
+		int count = 0;
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) == 'a' || s.charAt(i) == 'A' ||
+				s.charAt(i) == 'e' || s.charAt(i) == 'E' ||
+				s.charAt(i) == 'i' || s.charAt(i) == 'I' ||
+				s.charAt(i) == 'o' || s.charAt(i) == 'O' ||
+				s.charAt(i) == 'u' || s.charAt(i) == 'U') {
+				count++;
+			}
+		}
+		return count;
+	}
+
+	public static int countConsonants(String s) {
+		int count = 0;
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) != 'a' && s.charAt(i) != 'A' &&
+				s.charAt(i) != 'e' && s.charAt(i) != 'E' &&
+				s.charAt(i) != 'i' && s.charAt(i) != 'I' &&
+				s.charAt(i) != 'o' && s.charAt(i) != 'O' &&
+				s.charAt(i) != 'u' && s.charAt(i) != 'U') {
+				count++;
+			}
+		}
+		return count;
+	}
+
+	public static String printVowels(String s) {
+		String vowels = "";
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) == 'a' || s.charAt(i) == 'A' ||
+				s.charAt(i) == 'e' || s.charAt(i) == 'E' ||
+				s.charAt(i) == 'i' || s.charAt(i) == 'I' ||
+				s.charAt(i) == 'o' || s.charAt(i) == 'O' ||
+				s.charAt(i) == 'u' || s.charAt(i) == 'U') {
+				vowels += s.charAt(i);
+			}
+		}
+		return vowels;
+	}
+
+	public static String printConsonants(String s) {
+		String consonant = "";
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) != 'a' && s.charAt(i) != 'A' &&
+				s.charAt(i) != 'e' && s.charAt(i) != 'E' &&
+				s.charAt(i) != 'i' && s.charAt(i) != 'I' &&
+				s.charAt(i) != 'o' && s.charAt(i) != 'O' &&
+				s.charAt(i) != 'u' && s.charAt(i) != 'U' &&
+				s.charAt(i) != ' ') {
+				consonant += s.charAt(i);
+			}
+		}
+		return consonant;
 	}
 }
