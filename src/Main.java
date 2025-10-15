@@ -5,8 +5,8 @@ public class Main {
 	public static void main(String[] args) {
 		try (Scanner sc = new Scanner(System.in)) {
 			String s = sc.nextLine();
-			String res = Strings.Traverse.reverseString(s);
-			System.out.println(s.equals(res) ? "Palindrome" : "Not");
+			int res = Strings.Traverse.countWords(s);
+			System.out.println(res);
 		}
 	}
 }
