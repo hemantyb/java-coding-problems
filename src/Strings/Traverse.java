@@ -129,4 +129,59 @@ public class Traverse {
 		System.out.println(numericCount);
 		System.out.println(specialCount);
 	}
+
+	public static String removeSpecialChar(String s) {
+		String res = "";
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			if (ch >= 'a' && ch <= 'z' || 
+				ch >= 'A' && ch <= 'Z' || 
+				ch >= '0' && ch <= '9' ||
+				ch == ' ') {
+				res += ch;
+			}
+		}
+		return res;
+	}
+
+	public static String toLowerCase(String s) {
+		String res = "";
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			if (ch >= 'A' && ch <= 'Z') {
+				res = res + (char)(ch + 32);
+			} else {
+				res += ch;
+			}
+		}
+		return res;
+	}
+
+	public static String toUpperCase(String s) {
+		String res = "";
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			if (ch >= 'a' && ch <= 'z') {
+				res = res + (char)(ch - 32);
+			} else {
+				res += ch;
+			}
+		}
+		return res;
+	}
+
+	public static String upperToLowerToUpper(String s) {
+		String res = "";
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			if (ch >= 'a' && ch <= 'z') {
+				res = res + (char)(ch - 32);
+			} else if (ch >= 'A' && ch <= 'Z') {
+				res = res + (char)(ch + 32);
+			} else {
+				res += ch;
+			}
+		}
+		return res;
+	}
 }
