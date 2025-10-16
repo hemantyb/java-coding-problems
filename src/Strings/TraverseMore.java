@@ -61,13 +61,54 @@ public class TraverseMore {
 		return res;
 	}
 	
-	public static String insertAstrix(String s) {
+	public static String insertStarBeforeChar(String s) {
 		String res = "";
 		for (int i = 0; i < s.length(); i++) {
 			if (s.charAt(i) == 'a') {
-				res = res + "*" + s.charAt(i);
+				res += "*a";
 			} else {
 				res += s.charAt(i);
+			}
+		}
+		return res;
+	}
+
+	public static String insertStarBeforeVowels(String s) {
+		String res = "";
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			if (ch >= 'A' && ch <= 'Z' || ch >= 'a' && ch <= 'z') {
+				if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+					ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+					res = res + "*" + ch;
+				} else {
+					res += ch;
+				}
+			}
+		}
+		return res;
+	}
+
+	public static String replaceWithStar(String s) {
+		String res = "";
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) == 'a') {
+				res += "*";
+			} else {
+				res += s.charAt(i);
+			}
+		}
+		return res;
+	}
+
+	public static String lowercaseToStar(String s) {
+		String res = "";
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			if (ch >= 'a' && ch <= 'z') {
+				res += "*";
+			} else {
+				res += ch;
 			}
 		}
 		return res;
