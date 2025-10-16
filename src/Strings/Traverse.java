@@ -67,20 +67,6 @@ public class Traverse {
 		return count;
 	}
 
-	public static int countConsonants(String s) {
-		int count = 0;
-		for (int i = 0; i < s.length(); i++) {
-			if (s.charAt(i) != 'a' && s.charAt(i) != 'A' &&
-				s.charAt(i) != 'e' && s.charAt(i) != 'E' &&
-				s.charAt(i) != 'i' && s.charAt(i) != 'I' &&
-				s.charAt(i) != 'o' && s.charAt(i) != 'O' &&
-				s.charAt(i) != 'u' && s.charAt(i) != 'U') {
-				count++;
-			}
-		}
-		return count;
-	}
-
 	public static String printVowels(String s) {
 		String vowels = "";
 		for (int i = 0; i < s.length(); i++) {
@@ -95,18 +81,52 @@ public class Traverse {
 		return vowels;
 	}
 
-	public static String printConsonants(String s) {
-		String consonant = "";
+	public static int countConsonant(String s) {
+		int vowelCount = 0;
+		int consonantCount = 0;
 		for (int i = 0; i < s.length(); i++) {
-			if (s.charAt(i) != 'a' && s.charAt(i) != 'A' &&
-				s.charAt(i) != 'e' && s.charAt(i) != 'E' &&
-				s.charAt(i) != 'i' && s.charAt(i) != 'I' &&
-				s.charAt(i) != 'o' && s.charAt(i) != 'O' &&
-				s.charAt(i) != 'u' && s.charAt(i) != 'U' &&
-				s.charAt(i) != ' ') {
-				consonant += s.charAt(i);
+			char ch = s.charAt(i);
+			if (ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z') {
+				if (s.charAt(i) == 'a' || s.charAt(i) == 'A' ||
+					s.charAt(i) == 'e' || s.charAt(i) == 'E' ||
+					s.charAt(i) == 'i' || s.charAt(i) == 'I' ||
+					s.charAt(i) == 'o' || s.charAt(i) == 'O' ||
+					s.charAt(i) == 'u' || s.charAt(i) == 'U') {
+					vowelCount++;
+				} else {
+					consonantCount++;
+				}
 			}
 		}
-		return consonant;
+		return consonantCount;
+	}
+
+	public static void countEverything(String s) {
+		int vowelCount = 0;
+		int consonantCount = 0;
+		int numericCount = 0;
+		int specialCount = 0;
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			if (ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z') {
+				if (s.charAt(i) == 'a' || s.charAt(i) == 'A' ||
+					s.charAt(i) == 'e' || s.charAt(i) == 'E' ||
+					s.charAt(i) == 'i' || s.charAt(i) == 'I' ||
+					s.charAt(i) == 'o' || s.charAt(i) == 'O' ||
+					s.charAt(i) == 'u' || s.charAt(i) == 'U') {
+					vowelCount++;
+				} else {
+					consonantCount++;
+				}
+			} else if (ch >= '0' && ch <= '9') {
+				numericCount++;
+			} else {
+				specialCount++;
+			}
+		}
+		System.out.println(vowelCount);
+		System.out.println(consonantCount);
+		System.out.println(numericCount);
+		System.out.println(specialCount);
 	}
 }
