@@ -86,7 +86,7 @@ public class Traverse {
 	}
 
 	public static int countConsonant(String s) {
-		int vowelCount = 0;
+//		int vowelCount = 0;
 		int consonantCount = 0;
 		for (int i = 0; i < s.length(); i++) {
 			char ch = s.charAt(i);
@@ -96,7 +96,7 @@ public class Traverse {
 					s.charAt(i) == 'i' || s.charAt(i) == 'I' ||
 					s.charAt(i) == 'o' || s.charAt(i) == 'O' ||
 					s.charAt(i) == 'u' || s.charAt(i) == 'U') {
-					vowelCount++;
+//					vowelCount++;
 				} else {
 					consonantCount++;
 				}
