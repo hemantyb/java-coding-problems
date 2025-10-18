@@ -13,7 +13,7 @@ public class Traverse {
 		return res;
 	}
 
-	public static String reverseString2(String s) {
+	public static String isPalindrome(String s) {
 		int i = 0;
 		int j = s.length() - 1;
 
