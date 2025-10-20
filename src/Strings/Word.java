@@ -39,4 +39,30 @@ public class Word {
 		return arr;
 	}
 
+	public static String smallestWord(String s) {
+		String[] arr = s.split("\\s+");
+		int min = Integer.MAX_VALUE;
+		int index = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i].length() < min) {
+				min = arr[i].length();
+				index = i;
+			}
+		}
+		return arr[index];
+	}
+	
+	public static String largestWord(String s) {
+		String[] arr = s.split("\\s+");
+		int max = Integer.MIN_VALUE;
+		int index = 0;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i].length() > max) {
+				max = arr[i].length();
+				index = i;
+			}
+		}
+		return arr[index];
+	}
+
 }

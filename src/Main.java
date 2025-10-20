@@ -5,7 +5,9 @@ public class Main {
 	public static void main(String[] args) {
 		try (Scanner sc = new Scanner(System.in)) {
 			String s1 = sc.nextLine();
-			System.out.println(Strings.Sort.sortString(s1));
+			String s2 = sc.nextLine();
+			String res = Strings.Substring.isSubstring2(s1, s2);
+			System.out.println(res);
 		}
 	}
 }

@@ -34,6 +34,20 @@ public class Substring {
 		}
 		return "No";
 	}
+
+	public static String isSubstring2(String s1, String s2) {
+		int i = 0;
+		int j = 0;
+		while (i < s1.length() && j < s2.length()) {
+			if (s1.charAt(i) == s2.charAt(j)) {
+				i++;
+				j++;
+			} else {
+				i++;
+			}
+		}
+		return j == s2.length() ? "Yes" : "No";
+	}
 	
 	public static int countOccurrence(String s1, String s2) {
 		int count = 0;
